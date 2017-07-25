@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <!--<localRepository>D:\m2_repo\repositories</localRepository> -->
+  <servers>
+    <server>
+      <id>release-repo</id>
+      <username>xxxx</username>
+      <password>xxxx</password>
+    </server>
+    <server>
+      <id>snapshot-repo</id>
+      <username>user</username>
+      <password>pswd#$</password>
+    </server>
+  </servers>
+
+  <mirrors>
+    <mirror>
+      <id>nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <name>nexus</name>
+      <url>http://xxxx/artifactory/remote-jcenter</url>
+    </mirror>
+  </mirrors>
+</settings>
