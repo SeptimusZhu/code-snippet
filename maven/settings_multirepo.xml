@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <!--<localRepository>D:\m2_repo\repositories</localRepository> -->
+  <servers>
+    <server>
+      <id>dfs-yellow-release-repo</id>
+      <username>x</username>
+      <password>x</password>
+    </server>
+    <server>
+      <id>dfs-yellow-snapshot-repo</id>
+      <username>x</username>
+      <password>x</password>
+    </server>
+  </servers>
+
+  <profiles>
+	<profile>
+		<id>nexus</id>
+		<repositories>
+			<repository>
+				<id>central</id>
+				<name>2 your custom repo</name>
+				<url>http://x/artifactory/remote-jcenter/</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+			</repository>
+			<repository>
+				<id>dfs-yellow-snapshot-repo</id>
+				<name>2 your custom repo</name>
+				<url>http://x/artifactory/Product-DataFlow-snapshot/</url>
+                <releases>
+                    <enabled>false</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+			</repository>
+			<repository>
+				<id>dfs-yellow-release-repo</id>
+				<name>2 your custom repo</name>
+				<url>http://x/artifactory/Product-DataFlow-release/</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+			</repository>
+		</repositories>
+        <pluginRepositories>
+            <pluginRepository>
+                <id>central</id>
+                <url>http://x/artifactory/remote-jcenter/</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+            </pluginRepository>
+        </pluginRepositories>
+    </profile>
+</profiles>
+  <mirrors>
+    <mirror>
+      <id>nexus</id>
+      <mirrorOf>central</mirrorOf>
+      <name>nexus</name>
+      <url>http://x/artifactory/remote-jcenter</url>
+    </mirror>
+    <mirror>
+      <id>snapshot</id>
+      <mirrorOf>dfs-yellow-snapshot-repo</mirrorOf>
+      <name>snapshot</name>
+	  <url>http://x/artifactory/Product-DataFlow-snapshot/</url>
+    </mirror>
+    <mirror>
+      <id>release</id>
+      <mirrorOf>dfs-yellow-release-repo</mirrorOf>
+      <name>release</name>
+	  <url>http://x/artifactory/Product-DataFlow-release/</url>
+    </mirror>
+  </mirrors>
+</settings>
