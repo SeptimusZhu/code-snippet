@@ -6,6 +6,7 @@ import scala.concurrent.{Await, ExecutionContext}
 
 object CodeGen extends App {
 
+
   val Array(profile, jdbcDriver, url, outputFolder, pkg, user, password) =
     Array("slick.jdbc.PostgresProfile", "org.postgresql.Driver",
         "jdbc:postgresql://129.188.16.62:5432/xxx", "app", "dao",
