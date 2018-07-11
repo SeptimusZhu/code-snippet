@@ -1,0 +1,2 @@
+-Dsbt.ivy.home=~/.ivy2
+-Dsbt.repository.config=~/.sbt/repositories
