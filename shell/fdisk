@@ -1,0 +1,8 @@
+fdisk -l
+parted /dev/sdb
+mklabel gpt
+mkpart primary 0% 100%
+quit
+mkfs.ext3 /dev/sdb1
+echo "/dev/sdb1 /home ext3 defaults 0 0" >> /etc/fstab
+mount -a
